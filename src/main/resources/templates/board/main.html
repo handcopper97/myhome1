@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/common :: head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <title> Tourism Hero</title>
+  </head>
+  <body>
+      
+    <nav class="navbar navbar-default" th:replace="fragments/common :: menu" >
+        <!--
+        <div class="navbar-header">
+        
+         <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+        </button>  
+        
+        <a class="navbar-brand" href="#"><b><img src="image/1.jpg" class="img-circle" alt="image" width="30" height="30"> Tourism Hero</b></a>
+       </div>
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">            
+        </ul>
+            <ul class="nav navbar-nav navbar-right">
+              
+                 <li class="dropdown">
+                      <a href="#" class="dropddown-toggle"
+                      data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">로그인<span class="caret"></span></a>
+                     <ul class="dropdown-menu">
+                      <li><a href="login.html">로그인</a></li>
+                      <li ><a href="#">회원가입</a></li>
+              
+                 </ul>
+                </li>
+            </ul> 
+         
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Notice</a></li>
+                <li><a href="#">Q&A</a></li>
+            </ul>
+       
+       </div>
+       </nav>
+      
+       <nav class="navbar">
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav nav-tabs center">
+                <li><a href="#">관광명소</a></li>
+                <li><a href="#">숙박</a></li>
+                <li><a href="#">문화시설</a></li>
+                <li><a href="#">주유소</a></li>
+                <li><a href="#">카페</a></li>
+                <li><a href="#">편의점</a></li>
+            </ul>
+       
+       </div>
+       -->
+       </nav>
+
+        <!--메인-->
+       <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">  <img src=image/kakao_map.png alt="카카오맵" width="100" height="100">&nbsp; 장소 입력</h1>
+              <!--카카오맵 장소 검색-->
+                <form action="https://map.kakao.com/?nil_profile=title&nil_src=local" method="GET">
+                    <div class="mx-auto mt-5 search-bar input-group mb-3">
+                      <input name="q" type="text" class="form-control rounded-pill" placeholder="장소를 입력해주세요" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                      </div>
+                    </div>
+                  </form>
+            </div>
+
+            <div class="row">
+              
+                    <div class="col-md-4">
+                        <a href="seoul.html">
+                        <img src="image/seoul.jpg" alt="서울" width="300" height="300">
+                        <h4>서울</h4>
+                        <p>서울 관광지</p></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <a href="gyeongju.html">
+                        <img src=image/gyeongju.jpg alt="장소사진" width="300" height="300">
+                        <h4>경주</h4>
+                        <p>경주 관광지</p></a>
+                    </div>
+               
+                 <div class="col-md-4">
+                        <img src="image/1.jpg" alt="장소사진" width="300" height="300">
+                        <h4>장소3</h4>
+                        <p>ㅁㄴㅇㄹ</p>
+                    </div>
+          
+            </div>
+
+         </div>
+         <!--슬라이더-->
+
+         <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-tarhet="#myCarousel" data-slide-to="0" calss="active"></li>
+                <li data-tarhet="#myCarousel" data-slide-to="1" ></li>
+        
+            </ol>
+           
+            <div class="carousel-inner">
+                <!--첫번째 슬라이드-->
+                <div class="item active">
+                    <div class="col-md-4">
+                        <img src="image/2.jpg" alt="장소사진"  class="img-responsive" width="700" height="300">
+                       <div class="carousel-caption">
+                        <h1>무야호</h1>      
+                        </div> 
+                    </div>
+
+                    <div class="col-md-4">
+                        <img src="image/2.jpg" alt="장소사진"  class="img-responsive" width="700" height="300">
+                       <div class="carousel-caption">
+                        <h1>무야호2</h1>      
+                        </div> 
+                    </div>
+                   
+                    <div class="col-md-4">
+                        <img src="image/2.jpg" alt="장소사진"  class="img-responsive" width="700" height="300">
+                       <div class="carousel-caption">
+                        <h1>무야호3</h1>      
+                        </div> 
+                    </div> 
+                </div>
+            <!--두번째 슬라이드-->
+               <div class="item">
+
+                        <div class="col-md-4">
+                            <img src="image/2.jpg" alt="장소사진"  class="img-responsive" width="700" height="300">
+                           <div class="carousel-caption d-none d-md-block">
+                            <h1>호야무</h1>      
+                            </div> 
+                        </div>
+
+                        
+                        <div class="col-md-4">
+                            <img src="image/2.jpg" alt="장소사진"  class="img-responsive" width="700" height="300">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h1>호야무2</h1>      
+                            </div> 
+                        </div>
+
+                 </div>
+            </div> 
+            <!--왼쪽으로-->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+             <!--오른쪽으로-->
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+            </div>
+        </div> 
+      
+
+       <!--푸터-->
+         <footer style="background-color: #000000; color:#ffffff" th:replace="fragments/common :: footer">
+           <!--
+            <div class= "container">
+                <br>
+                <div class= "row">
+                    <div class="col-sm-2" style="text-align: center;"><h5>Copyright &copy; 2021</h5><h5>프로젝트</h5></div>
+                    <div class="col-sm-4"><h4>팀 소개</h4><p>팀소개</p></div>
+                    <div class="col-sm-2" ><p>이용약관 </p> <p>개인정보처리방침 </p></div>
+
+            </div>
+        </div>
+        -->
+         </footer>
+
+
+
+
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+  </body>
+</html>
